@@ -16,5 +16,6 @@ nullptr -> pointer that points to nothing
 auto main() -> int {
     int *p {nullptr};
 
+    
     std::cout << p; // 0
 }

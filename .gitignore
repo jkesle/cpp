@@ -3,3 +3,6 @@
 
 #executables
 *.exe
+
+#.clang-tidy
+.clang-tidy

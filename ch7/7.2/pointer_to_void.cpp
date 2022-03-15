@@ -27,17 +27,17 @@ auto f(char *c) -> void {
     p == pv; // void* equality comparison with another void*
 
 
-    *p;// ERROR!! ISO C++ does not allow indirection on operand of type 'void *'
+    //*p;// ERROR!! ISO C++ does not allow indirection on operand of type 'void *'
 
 
-    ++p; // ERROR!! Arithmetic on a pointer to void
+    //++p; // ERROR!! Arithmetic on a pointer to void
 
 
     char* p2 {(char*)(p)}; // explicit conversion back to char* [static_cast not used due to it not being encountered yet]
 
 
-    double* pd1 {p}; // ERROR!!
+    //double* pd1 {p}; // ERROR!!
 
 
-    double* pd2 {p2}; // ERROR!!
+    //double* pd2 {p2}; // ERROR!!
 }
