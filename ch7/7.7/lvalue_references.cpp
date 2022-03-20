@@ -42,3 +42,33 @@ auto main() -> int {
     std::cout << b << std::endl; // output 2
 
 }
+
+
+
+
+/* CONST AND LVALUE REFERENCES */
+
+
+
+// the initializer for a const lvalue reference does not need to be an lvalue of type T
+const int &cref {25}; // legal syntax!
+
+
+/*
+-> implicit type conversion to T is applied if necessary
+-> the resulting value is placed in a temporary variable of type T.
+-> this temporary variable is used as the value of the initializer.
+
+for the example cref above:
+    the constant 25 is placed in a temp vairable of type int.
+
+    int temp {25};
+    const int &cref {temp};
+
+
+
+
+
+-> const references refer to an lvalue that is readonly
+
+*/
