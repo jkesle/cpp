@@ -25,7 +25,7 @@ auto bar() -> bool {
 };
 
 // pfrb is a pointer to the bar function, which takes no parameters and returns a bool; the typealias is valid here
-ptrFuncReturnBool pfrb = &bar;
+const ptrFuncReturnBool pfrb = &bar;
 
 
 /*
