@@ -1,6 +1,6 @@
 #include "../maze-example/Door.h"
 
-class RegularDoor : Door {
+class RegularDoor : public Door {
     private:
         Room *room1;
         Room *room2;

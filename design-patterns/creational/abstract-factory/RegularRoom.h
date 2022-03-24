@@ -2,7 +2,7 @@
 
 #pragma once
 
-class RegularRoom : Room {
+class RegularRoom : public Room {
     private:
         int const roomNumber;
         std::array<MapSite*, 4> sides;
