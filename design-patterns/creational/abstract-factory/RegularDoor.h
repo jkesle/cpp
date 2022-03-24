@@ -7,7 +7,7 @@ class RegularDoor : public Door {
         bool isOpen;
 
     public:
-        explicit RegularDoor(Room *r1, Room *r2) : room1{r1}, room2{r2}, isOpen(true) {}
+        explicit RegularDoor(Room *r1 = nullptr, Room *r2 = nullptr) : room1{r1}, room2{r2}, isOpen(true) {}
         auto otherSide(Room* r) -> Room * override;
         auto enter() -> void override;
 };

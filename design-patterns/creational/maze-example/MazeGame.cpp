@@ -1,6 +1,6 @@
 #include "MazeGame.h"
 
-auto MazeGame::createMazeUsingAbsFactory(MazeFactory &mf) -> Maze* {
+auto MazeGame::createMaze(MazeFactory &mf) -> Maze* {
     Maze *maze = mf.makeMaze();
     Room *room1 = mf.makeRoom(mf.getNextRoomNum());
     Room *room2 = mf.makeRoom(mf.getNextRoomNum());
@@ -22,3 +22,14 @@ auto MazeGame::createMazeUsingAbsFactory(MazeFactory &mf) -> Maze* {
 
     return maze;
 }
+
+auto MazeGame::createMaze(MazeBuilder &mb) -> Maze* {
+    mb.buildMaze();
+
+    mb.buildRoom(1);
+    mb.buildRoom(2);
+
+    mb.buildDoor(DoorFromTo{1, 2});
+
+    return mb.getMaze();
+};
